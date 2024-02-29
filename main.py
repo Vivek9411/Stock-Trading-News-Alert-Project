@@ -12,7 +12,7 @@ COMPANY_NAME = "RELIANCE"
 
 # STEP 1: Use https://www.alphavantage.co
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
-API_KEY = 'YVG1KIOYME0IP2FT'
+API_KEY = api_key
 API = "https://www.alphavantage.co/query"
 parameter = {
     "function": "TIME_SERIES_DAILY",
