@@ -12,7 +12,7 @@ COMPANY_NAME = "RELIANCE"
 
 # STEP 1: Use https://www.alphavantage.co
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
-API_KEY = api_key
+API_KEY = api_key_for_alphavantage
 API = "https://www.alphavantage.co/query"
 parameter = {
     "function": "TIME_SERIES_DAILY",
@@ -45,9 +45,9 @@ percent = (abs(yesterday_closing-before_yesterday_opening)/before_yesterday_open
 
 # STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
-Api_KEY2 = '7162308c8429437bacd0f9c4ea19b4b5'
+Api_KEY2 =  spi_key_for_newsapi
 url = "https://newsapi.org/v2/everything"
-response1 = requests.get(url="https://newsapi.org/v2/everything?q=RELIANCE&apiKey=7162308c8429437bacd0f9c4ea19b4b5")
+response1 = requests.get(url=f"https://newsapi.org/v2/everything?q=RELIANCE&apiKey={Api_KEYS2}")
 news_data = response1.json()['articles'][:3]
 final_news = []
 for item in news_data:
